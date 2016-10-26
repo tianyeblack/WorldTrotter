@@ -7,21 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA5A74431DBFCC2400B98C82 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA5A74421DBFCC2400B98C82 /* MapKit.framework */; };
+		CA5A74461DBFD27B00B98C82 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA5A74451DBFD27B00B98C82 /* MapViewController.m */; };
 		CAED32CE1DBEB89E00C2E10B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CAED32CD1DBEB89E00C2E10B /* main.m */; };
 		CAED32D11DBEB89E00C2E10B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CAED32D01DBEB89E00C2E10B /* AppDelegate.m */; };
-		CAED32D41DBEB89E00C2E10B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAED32D31DBEB89E00C2E10B /* ViewController.m */; };
+		CAED32D41DBEB89E00C2E10B /* ConversionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAED32D31DBEB89E00C2E10B /* ConversionViewController.m */; };
 		CAED32D71DBEB89E00C2E10B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAED32D51DBEB89E00C2E10B /* Main.storyboard */; };
 		CAED32D91DBEB89E00C2E10B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAED32D81DBEB89E00C2E10B /* Assets.xcassets */; };
 		CAED32DC1DBEB89E00C2E10B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAED32DA1DBEB89E00C2E10B /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA5A74421DBFCC2400B98C82 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		CA5A74441DBFD27B00B98C82 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		CA5A74451DBFD27B00B98C82 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		CA5A74481DC008FB00B98C82 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		CAED32C91DBEB89E00C2E10B /* WorldTrotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldTrotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAED32CD1DBEB89E00C2E10B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CAED32CF1DBEB89E00C2E10B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CAED32D01DBEB89E00C2E10B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CAED32D21DBEB89E00C2E10B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CAED32D31DBEB89E00C2E10B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CAED32D21DBEB89E00C2E10B /* ConversionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConversionViewController.h; sourceTree = "<group>"; };
+		CAED32D31DBEB89E00C2E10B /* ConversionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConversionViewController.m; sourceTree = "<group>"; };
 		CAED32D61DBEB89E00C2E10B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CAED32D81DBEB89E00C2E10B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAED32DB1DBEB89E00C2E10B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -33,17 +39,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA5A74431DBFCC2400B98C82 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA5A74411DBFCC2400B98C82 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CA5A74421DBFCC2400B98C82 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CAED32C01DBEB89E00C2E10B = {
 			isa = PBXGroup;
 			children = (
 				CAED32CB1DBEB89E00C2E10B /* WorldTrotter */,
 				CAED32CA1DBEB89E00C2E10B /* Products */,
+				CA5A74411DBFCC2400B98C82 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,13 +76,15 @@
 			children = (
 				CAED32CF1DBEB89E00C2E10B /* AppDelegate.h */,
 				CAED32D01DBEB89E00C2E10B /* AppDelegate.m */,
-				CAED32D21DBEB89E00C2E10B /* ViewController.h */,
-				CAED32D31DBEB89E00C2E10B /* ViewController.m */,
+				CAED32D21DBEB89E00C2E10B /* ConversionViewController.h */,
+				CAED32D31DBEB89E00C2E10B /* ConversionViewController.m */,
 				CAED32D51DBEB89E00C2E10B /* Main.storyboard */,
 				CAED32D81DBEB89E00C2E10B /* Assets.xcassets */,
 				CAED32DA1DBEB89E00C2E10B /* LaunchScreen.storyboard */,
 				CAED32DD1DBEB89E00C2E10B /* Info.plist */,
 				CAED32CC1DBEB89E00C2E10B /* Supporting Files */,
+				CA5A74441DBFD27B00B98C82 /* MapViewController.h */,
+				CA5A74451DBFD27B00B98C82 /* MapViewController.m */,
 			);
 			path = WorldTrotter;
 			sourceTree = "<group>";
@@ -150,9 +168,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAED32D41DBEB89E00C2E10B /* ViewController.m in Sources */,
+				CAED32D41DBEB89E00C2E10B /* ConversionViewController.m in Sources */,
 				CAED32D11DBEB89E00C2E10B /* AppDelegate.m in Sources */,
 				CAED32CE1DBEB89E00C2E10B /* main.m in Sources */,
+				CA5A74461DBFD27B00B98C82 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +182,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CAED32D61DBEB89E00C2E10B /* Base */,
+				CA5A74481DC008FB00B98C82 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -309,6 +329,7 @@
 				CAED32E21DBEB89E00C2E10B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
