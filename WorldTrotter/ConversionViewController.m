@@ -61,12 +61,15 @@
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+  NSRange letterRange = [string rangeOfCharacterFromSet:[NSCharacterSet letterCharacterSet]];
+  if (letterRange.location != NSNotFound) return NO;
+  
   NSLocale *currentLocale = [NSLocale currentLocale];
   NSString *decimalSeparator = [currentLocale objectForKey:NSLocaleDecimalSeparator];
+  NSRange existingSepRange = [textField.text rangeOfString:decimalSeparator];
+  NSRange newSepRange = [string rangeOfString:decimalSeparator];
+  if (existingSepRange.location != NSNotFound && newSepRange.location != NSNotFound) return NO;
   
-  NSRange existingRange = [textField.text rangeOfString:decimalSeparator];
-  NSRange newRange = [string rangeOfString:decimalSeparator];
-  if (existingRange.location != NSNotFound && newRange.location != NSNotFound) return NO;
   return YES;
 }
 
