@@ -6,6 +6,25 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Web-->
+        <scene sceneID="Th5-Fn-eES">
+            <objects>
+                <viewController title="Web" id="iaH-CV-0Gq" customClass="WebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qLi-xJ-Dce"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZLq-vS-HZp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pFs-pk-Al7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Web" id="XWl-Ey-9cB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dxB-6g-Dpm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="841" y="898"/>
+        </scene>
         <!--Conversion-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -109,6 +128,7 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="SwX-4v-peB"/>
                         <segue destination="PPW-oj-gWf" kind="relationship" relationship="viewControllers" id="PZe-uk-fHe"/>
+                        <segue destination="iaH-CV-0Gq" kind="relationship" relationship="viewControllers" id="Joi-jI-mLn"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2g2-eL-6Nf" userLabel="First Responder" sceneMemberID="firstResponder"/>

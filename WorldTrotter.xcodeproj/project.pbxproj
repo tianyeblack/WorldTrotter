@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		CA5A74431DBFCC2400B98C82 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA5A74421DBFCC2400B98C82 /* MapKit.framework */; };
 		CA5A74461DBFD27B00B98C82 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA5A74451DBFD27B00B98C82 /* MapViewController.m */; };
+		CA5A747A1DC12A3D00B98C82 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA5A74791DC12A3D00B98C82 /* WebViewController.m */; };
+		CA5A747C1DC12B7000B98C82 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA5A747B1DC12B7000B98C82 /* WebKit.framework */; };
 		CAED32CE1DBEB89E00C2E10B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CAED32CD1DBEB89E00C2E10B /* main.m */; };
 		CAED32D11DBEB89E00C2E10B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CAED32D01DBEB89E00C2E10B /* AppDelegate.m */; };
 		CAED32D41DBEB89E00C2E10B /* ConversionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAED32D31DBEB89E00C2E10B /* ConversionViewController.m */; };
@@ -22,6 +24,9 @@
 		CA5A74441DBFD27B00B98C82 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		CA5A74451DBFD27B00B98C82 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		CA5A74481DC008FB00B98C82 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		CA5A74781DC12A3D00B98C82 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		CA5A74791DC12A3D00B98C82 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		CA5A747B1DC12B7000B98C82 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		CAED32C91DBEB89E00C2E10B /* WorldTrotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldTrotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAED32CD1DBEB89E00C2E10B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CAED32CF1DBEB89E00C2E10B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -39,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA5A747C1DC12B7000B98C82 /* WebKit.framework in Frameworks */,
 				CA5A74431DBFCC2400B98C82 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -49,6 +55,7 @@
 		CA5A74411DBFCC2400B98C82 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CA5A747B1DC12B7000B98C82 /* WebKit.framework */,
 				CA5A74421DBFCC2400B98C82 /* MapKit.framework */,
 			);
 			name = Frameworks;
@@ -79,6 +86,8 @@
 				CAED32D21DBEB89E00C2E10B /* ConversionViewController.h */,
 				CAED32D31DBEB89E00C2E10B /* ConversionViewController.m */,
 				CAED32D51DBEB89E00C2E10B /* Main.storyboard */,
+				CA5A74781DC12A3D00B98C82 /* WebViewController.h */,
+				CA5A74791DC12A3D00B98C82 /* WebViewController.m */,
 				CAED32D81DBEB89E00C2E10B /* Assets.xcassets */,
 				CAED32DA1DBEB89E00C2E10B /* LaunchScreen.storyboard */,
 				CAED32DD1DBEB89E00C2E10B /* Info.plist */,
@@ -169,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAED32D41DBEB89E00C2E10B /* ConversionViewController.m in Sources */,
+				CA5A747A1DC12A3D00B98C82 /* WebViewController.m in Sources */,
 				CAED32D11DBEB89E00C2E10B /* AppDelegate.m in Sources */,
 				CAED32CE1DBEB89E00C2E10B /* main.m in Sources */,
 				CA5A74461DBFD27B00B98C82 /* MapViewController.m in Sources */,
