@@ -9,9 +9,10 @@
 #import "MapViewController.h"
 #import <MapKit/MapKit.h>
 
-@interface MapViewController ()
+@interface MapViewController () <MKMapViewDelegate, CLLocationManagerDelegate>
 
 @property (nonatomic) MKMapView *mapView;
+@property (nonatomic) CLLocationManager *locationManager;
 
 @end
 
@@ -40,16 +41,52 @@
   topConstraint.active = YES;
   leadingConstraint.active = YES;
   trailingConstraint.active = YES;
+  
+  UIButton *compass = [UIButton new];
+  compass.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.5];
+  compass.translatesAutoresizingMaskIntoConstraints = NO;
+  [self.view addSubview:compass];
+  
+  [compass addTarget:self action:@selector(compassPressed:) forControlEvents:UIControlEventTouchUpInside];
+  
+  NSLayoutConstraint *bottomConstraint = [compass.bottomAnchor constraintEqualToAnchor:self.bottomLayoutGuide.topAnchor
+                                                                              constant:-8.0];
+  NSLayoutConstraint *trailingButtonConstraint = [compass.trailingAnchor constraintEqualToAnchor:margins.trailingAnchor];
+  
+  bottomConstraint.active = YES;
+  trailingButtonConstraint.active = YES;
 }
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  _mapView.zoomEnabled = YES;
+  _mapView.scrollEnabled = YES;
+  _mapView.delegate = self;
+  
+  _locationManager = [CLLocationManager new];
+  _locationManager.delegate = self;
+  _locationManager.distanceFilter = kCLDistanceFilterNone;
+  _locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+  [_locationManager requestWhenInUseAuthorization];
+  [_locationManager startUpdatingLocation];
+  
   NSLog(@"MapViewController loaded its view.");
 }
 
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
   // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - View
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+  return nil;
+}
+
+- (void) mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
+  MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 800, 800);
+  [_mapView setRegion: [_mapView regionThatFits: region] animated: YES];
 }
 
 /*
@@ -81,4 +118,13 @@
       break;
   }
 }
+
+- (void)compassPressed: (UIButton *) sender {
+  _mapView.showsUserLocation = !_mapView.showsUserLocation;
+  _mapView.userTrackingMode = !_mapView.showsUserLocation ? MKUserTrackingModeNone : MKUserTrackingModeFollow;
+  NSLog(@"Tracking set to %s", _mapView.showsUserLocation ? "YES" : "NO");
+  NSLog(@"Tracking mode set to %s", _mapView.userTrackingMode == MKUserTrackingModeNone ? "NONE" : "FOLLOW");
+  NSLog(@"User location is %s: %@", _mapView.userLocationVisible ? "VISIBLE" : "INVISIBLE", _mapView.userLocation.location);
+}
+
 @end

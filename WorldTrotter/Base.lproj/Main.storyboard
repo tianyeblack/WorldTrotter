@@ -105,10 +105,6 @@
         <scene sceneID="B3H-Vp-caW">
             <objects>
                 <viewController id="PPW-oj-gWf" customClass="MapViewController" sceneMemberID="viewController">
-                    <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="qxJ-QD-oOv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </mapView>
                     <tabBarItem key="tabBarItem" title="Map" id="5nb-OR-DPe"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N03-u3-U8x" userLabel="First Responder" sceneMemberID="firstResponder"/>
